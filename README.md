@@ -64,7 +64,6 @@ mtc_cleaning_task/
 - Be sure to set RViz **Fixed Frame** to `"world"`
 - Visual markers are published on `/rviz_visual_tools`
 - Robot model: **Franka Emika Panda**
-- The `ignore/` folder is excluded via `.gitignore`
 
 ## 📄 License
 
