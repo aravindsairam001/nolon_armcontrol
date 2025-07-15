@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot name="simple_test">
+
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.4 0.35 0.4"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.0 0.0 1.0 0.8"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Lid Link -->
+  <link name="lid_link">
+    <visual>
+      <geometry>
+        <box size="0.35 0.3 0.05"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1.0 0.0 0.0 0.8"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Hinge Joint -->
+  <joint name="lid_hinge" type="revolute">
+    <parent link="base_link"/>
+    <child link="lid_link"/>
+    <origin xyz="0.0 -0.15 0.25" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.57" upper="0.1" effort="10.0" velocity="1.0"/>
+  </joint>
+
+</robot>
