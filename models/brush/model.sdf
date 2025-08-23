@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="mirror_brush">
+    <static>false</static>
+    <self_collide>false</self_collide>
+    
+    <!-- Main brush body -->
+    <link name="mirror_brush_body">
+      <pose>0 0 0 0 0 0</pose>
+      
+      <inertial>
+        <mass>0.12</mass>
+        <pose>0 0 0.05 0 0 0</pose>
+        <inertia>
+          <ixx>0.0006</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0012</iyy>
+          <iyz>0</iyz>
+          <izz>0.0006</izz>
+        </inertia>
+      </inertial>
+      
+      <!-- Ergonomic Handle (blue plastic) -->
+      <visual name="handle_visual">
+        <pose>0 0 0.065 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.012</radius>
+            <length>0.11</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.1 0.3 0.7 1</ambient>
+          <diffuse>0.1 0.3 0.7 1</diffuse>
+          <specular>0.3 0.3 0.3 1</specular>
+        </material>
+      </visual>
+      
+      <collision name="handle_collision">
+        <pose>0 0 0.065 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.012</radius>
+            <length>0.11</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+      <!-- Handle grip (textured rubber section) -->
+      <visual name="grip_visual">
+        <pose>0 0 0.045 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.014</radius>
+            <length>0.025</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Mirror brush head (rectangular, flat, white plastic) -->
+      <visual name="head_visual">
+        <pose>0 0 0.006 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.075 0.045 0.012</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.95 0.95 0.95 1</ambient>
+          <diffuse>0.95 0.95 0.95 1</diffuse>
+          <specular>0.2 0.2 0.2 1</specular>
+        </material>
+      </visual>
+      
+      <collision name="head_collision">
+        <pose>0 0 0.006 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.075 0.045 0.012</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <!-- Soft microfiber bristles (light blue, very fine) -->
+      <!-- Row 1 -->
+      <visual name="bristles_1_1">
+        <pose>-0.025 -0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_1_2">
+        <pose>-0.025 -0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_1_3">
+        <pose>-0.025 0 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_1_4">
+        <pose>-0.025 0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_1_5">
+        <pose>-0.025 0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Row 2 -->
+      <visual name="bristles_2_1">
+        <pose>-0.012 -0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_2_2">
+        <pose>-0.012 -0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_2_3">
+        <pose>-0.012 0 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_2_4">
+        <pose>-0.012 0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_2_5">
+        <pose>-0.012 0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Row 3 (center) -->
+      <visual name="bristles_3_1">
+        <pose>0 -0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_3_2">
+        <pose>0 -0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_3_3">
+        <pose>0 0 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_3_4">
+        <pose>0 0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_3_5">
+        <pose>0 0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Row 4 -->
+      <visual name="bristles_4_1">
+        <pose>0.012 -0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_4_2">
+        <pose>0.012 -0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_4_3">
+        <pose>0.012 0 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_4_4">
+        <pose>0.012 0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_4_5">
+        <pose>0.012 0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Row 5 -->
+      <visual name="bristles_5_1">
+        <pose>0.025 -0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_5_2">
+        <pose>0.025 -0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_5_3">
+        <pose>0.025 0 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_5_4">
+        <pose>0.025 0.007 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="bristles_5_5">
+        <pose>0.025 0.015 -0.002 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0002</radius>
+            <length>0.006</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.9 1.0 1</ambient>
+          <diffuse>0.85 0.9 1.0 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Simplified collision for bristles (soft contact) -->
+      <collision name="bristles_collision">
+        <pose>0 0 -0.002 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.065 0.04 0.006</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.7</mu>
+              <mu2>0.7</mu2>
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.05</restitution_coefficient>
+          </bounce>
+          <contact>
+            <ode>
+              <soft_cfm>0.1</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1000</kp>
+              <kd>10</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      
+    </link>
+    
+  </model>
+</sdf>

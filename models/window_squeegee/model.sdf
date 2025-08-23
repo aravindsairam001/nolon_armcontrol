@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="window_squeegee">
+    <static>false</static>
+    <self_collide>false</self_collide>
+    
+    <!-- Main squeegee body -->
+    <link name="squeegee_body">
+      <pose>0 0 0 0 0 0</pose>
+      
+      <inertial>
+        <mass>0.18</mass>
+        <pose>0 0 0.08 0 0 0</pose>
+        <inertia>
+          <ixx>0.0009</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0012</iyy>
+          <iyz>0</iyz>
+          <izz>0.0015</izz>
+        </inertia>
+      </inertial>
+      
+      <!-- Handle -->
+      <visual name="handle_visual">
+        <pose>0 0 0.1 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.18</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.8 1</ambient>
+          <diffuse>0.2 0.2 0.8 1</diffuse>
+          <specular>0.3 0.3 0.3 1</specular>
+        </material>
+      </visual>
+      
+      <collision name="handle_collision">
+        <pose>0 0 0.1 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.18</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+      <!-- Ergonomic grip -->
+      <visual name="grip_visual">
+        <pose>0 0 0.08 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.017</radius>
+            <length>0.05</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Metal frame/holder -->
+      <visual name="frame_visual">
+        <pose>0 0 0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.25 0.02 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      
+      <collision name="frame_collision">
+        <pose>0 0 0.005 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.25 0.02 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <!-- Rubber blade (main cleaning element) -->
+      <visual name="rubber_blade_visual">
+        <pose>0 0 -0.003 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.24 0.003 0.008</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.2 0.2 0.2 1</diffuse>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+      
+      <collision name="rubber_blade_collision">
+        <pose>0 0 -0.003 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.24 0.003 0.008</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0.1</restitution_coefficient>
+          </bounce>
+          <contact>
+            <ode>
+              <soft_cfm>0.05</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>5000</kp>
+              <kd>50</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      
+      <!-- Corner supports (small metal pieces holding rubber) -->
+      <visual name="corner_support_left">
+        <pose>-0.11 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.025 0.015</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      
+      <visual name="corner_support_right">
+        <pose>0.11 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.015 0.025 0.015</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+      
+      <!-- Handle connection joint -->
+      <visual name="connection_joint">
+        <pose>0 0 0.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.03 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.6 0.6 0.6 1</ambient>
+          <diffuse>0.6 0.6 0.6 1</diffuse>
+          <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+      
+      <collision name="connection_joint_collision">
+        <pose>0 0 0.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.03 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      
+    </link>
+    
+  </model>
+</sdf>
