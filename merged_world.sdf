@@ -20,7 +20,7 @@
     <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
     <model name='floor'>
-  <pose>0 -5 0 0 0 0</pose>
+      <pose>-0.34577226638793945 5 0 0 0 0</pose>
       <static>true</static>
       <link name='floor_link'>
         <collision name='floor_collision'>
@@ -49,7 +49,7 @@
             <specular>0.100000001 0.100000001 0.100000001 1</specular>
           </material>
         </visual>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>5 0 0 0 0 0</pose>
         <inertial>
           <pose>0 0 0 0 0 0</pose>
           <mass>1</mass>
@@ -67,7 +67,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='wall_south'>
-  <pose>0 -3 0 0 0 0</pose>
+      <pose>5 7 0 0 0 0</pose>
       <model name='aws_robomaker_residential_RoomWall_01'>
         <link name='link'>
           <inertial>
@@ -98,7 +98,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='wall_west'>
-  <pose>-2 -5 0 0 0 1.5700000000000001</pose>
+      <pose>3 5 0 0 0 1.5699999999999998</pose>
       <model name='aws_robomaker_residential_RoomWall_01'>
         <link name='link'>
           <inertial>
@@ -129,7 +129,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='wall_east'>
-  <pose>2 -5 0 0 0 1.5700000000000001</pose>
+      <pose>7 5 0 0 0 1.5699999999999998</pose>
       <model name='aws_robomaker_residential_RoomWall_01'>
         <link name='link'>
           <inertial>
@@ -159,9 +159,9 @@
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
-  <model name='toilet_1'>
-  <pose>-1.2842909097671507 -4.999932877261017 0 0 0 1.5700000841906609</pose>
-  <model name='toilet_1'>
+    <model name='toilet_1'>
+      <pose>3.7157090902328491 5.0001171227398826 0 0 0 1.5700000841906609</pose>
+      <model name='toilet_1'>
         <static>true</static>
         <link name='link'>
           <collision name='collision'>
@@ -193,7 +193,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='bathroom_sink'>
-  <pose>0 -3.0188000202178955 0.82434558868408203 0 0 0</pose>
+      <pose>5 6.9811999797821045 0.82434558868408203 0 0 0</pose>
       <model name='BathroomSink'>
         <static>true</static>
         <link name='body'>
@@ -218,7 +218,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='bathroom_mirror'>
-  <pose>0 -3.1009758710861206 -0.13495112955570221 1.5501099861717527 0 0</pose>
+      <pose>5 6.8990241289138794 -0.13495112955570221 1.5501099861717527 0 0</pose>
       <model name='whiteboard'>
         <static>true</static>
         <link name='link'>
@@ -718,9 +718,9 @@
         </collision>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>0.5 0.50030950947740216 0.07378026972589935 -0.00096639195929281666 -3.8021242292648667e-14 1.6900720111836019e-16</pose>
+      <pose>5.5 4.6700868606567383 0.069750659167766599 -0.00096639211925561303 -3.8021204722392933e-14 1.6900703217707289e-16</pose>
     </model>
-  <model name='window_squeegee_1'>
+    <model name='window_squeegee_1'>
       <static>false</static>
       <self_collide>false</self_collide>
       <link name='squeegee_body'>
@@ -905,9 +905,9 @@
         </collision>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>0.30000001192092901 0.50045432545375579 0.07950825840083231 1.01430774384923e-09 0.00014694872502281378 1.5707999780625499</pose>
+      <pose>5.2650947570800772 4.6582150459289551 0.078897319734096499 1.0091377532184783e-09 0.00014694899835142748 1.5707999780642883</pose>
     </model>
-        <model name='ground_plane'>
+    <model name='ground_plane'>
       <static>true</static>
       <link name='link'>
         <collision name='collision'>
@@ -970,7 +970,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='test_room'>
-      <pose>-0.077849000000002277 -1.231260000000008 0 0 0 -7.7715611723760958e-16</pose>
+      <pose>-0.077849000000002277 -1.2312600000000151 0 0 0 -1.4432899320127035e-15</pose>
       <link name='Wall_1'>
         <pose>-10.0852 -6.9999999999999999e-06 0 0 0 -1.5708</pose>
         <visual name='Wall_1_Visual_0'>
@@ -1146,7 +1146,7 @@
         </inertial>
       </link>
       <link name='Wall_10'>
-        <pose>10.052600000000004 -5.2189899999999838 0 0 0 -1.5643299999999996</pose>
+        <pose>10.052600000000012 -5.2189899999999714 0 0 0 -1.5643299999999982</pose>
         <visual name='Wall_10_Visual_0'>
           <pose>-4.1680999999999999 0 1.25 0 0 0</pose>
           <geometry>
@@ -1437,7 +1437,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-6.4538500000000036 9.9384100000000011 0 0 0 -0.00020300000139346062</pose>
+        <pose>-6.4538500000000099 9.9384100000000046 0 0 0 -0.00020300000278703243</pose>
         <self_collide>false</self_collide>
         <enable_wind>false</enable_wind>
         <kinematic>false</kinematic>
@@ -1455,7 +1455,7 @@
         </inertial>
       </link>
       <link name='Wall_16'>
-        <pose>-6.4131499999999946 -0.50716799999999673 0 0 0 3.1415900000000008</pose>
+        <pose>-6.4131499999999946 -0.50716799999999385 0 0 0 3.1415900000000012</pose>
         <visual name='Wall_16_Visual_0'>
           <pose>-1.94676 0 1.25 0 0 0</pose>
           <geometry>
@@ -1590,7 +1590,7 @@
         </inertial>
       </link>
       <link name='Wall_18'>
-        <pose>-2.8631499999999916 -5.1821699999999931 0 0 0 -1.5707999999999998</pose>
+        <pose>-2.8631499999999872 -5.1821699999999868 0 0 0 -1.5707999999999993</pose>
         <visual name='Wall_18_Visual_0'>
           <pose>-4.08833 0 1.25 0 0 0</pose>
           <geometry>
@@ -1920,7 +1920,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-7.9691699999999939 -5.4442299999999983 0 0 0 -1.5707999999999998</pose>
+        <pose>-7.9691699999999894 -5.4442299999999975 0 0 0 -1.5707999999999993</pose>
         <self_collide>false</self_collide>
         <enable_wind>false</enable_wind>
         <kinematic>false</kinematic>
@@ -1938,7 +1938,7 @@
         </inertial>
       </link>
       <link name='Wall_22'>
-        <pose>7.511880000000005 -3.0195299999999863 0 0 0 -2.3561899999999989</pose>
+        <pose>7.5118800000000094 -3.0195299999999752 0 0 0 -2.3561899999999985</pose>
         <visual name='Wall_22_Visual_0'>
           <pose>-2.0926499999999999 0 1.25 0 0 0</pose>
           <geometry>
@@ -2112,7 +2112,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>5.0016500000000086 -7.7047599999999878 0 0 0 -1.5707999999999998</pose>
+        <pose>5.0016500000000157 -7.704759999999979 0 0 0 -1.5707999999999993</pose>
         <self_collide>false</self_collide>
         <enable_wind>false</enable_wind>
         <kinematic>false</kinematic>
@@ -2169,7 +2169,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>8.0000000112767644e-06 -9.9391599999999904 0 0 0 7.7715611723760958e-16</pose>
+        <pose>8.000000019672826e-06 -9.9391599999999851 0 0 0 1.4432899320127037e-15</pose>
         <self_collide>false</self_collide>
         <enable_wind>false</enable_wind>
         <kinematic>false</kinematic>
@@ -2187,7 +2187,7 @@
         </inertial>
       </link>
       <link name='Wall_7'>
-        <pose>-2.8423099999999994 4.7152500000000046 0 0 0 -1.5745799999999992</pose>
+        <pose>-2.8423100000000017 4.7152500000000099 0 0 0 -1.5745799999999988</pose>
         <visual name='Wall_7_Visual_0'>
           <pose>-3.9284500000000002 0 1.25 0 0 0</pose>
           <geometry>
@@ -2322,7 +2322,7 @@
         </inertial>
       </link>
       <link name='Wall_8'>
-        <pose>3.5800100000000041 -0.50823699999998939 0 0 0 -0.00016600000076160548</pose>
+        <pose>3.5800100000000072 -0.50823699999998007 0 0 0 -0.00016600000152332205</pose>
         <visual name='Wall_8_Visual_0'>
           <pose>-3.36964 0 1.25 0 0 0</pose>
           <geometry>
@@ -2555,7 +2555,7 @@
         </collision>
       </link>
       <link name='Wall_16'>
-        <pose>5.3290705182007514e-15 5.1750000000000043 -0.7441580000000001 0 0 3.141589999999999</pose>
+        <pose>8.4376949871511897e-15 5.1750000000000114 -0.7441580000000001 0 0 3.1415899999999986</pose>
         <self_collide>false</self_collide>
         <enable_wind>false</enable_wind>
         <kinematic>false</kinematic>
@@ -2650,7 +2650,7 @@
       </link>
       <static>true</static>
       <allow_auto_disable>true</allow_auto_disable>
-      <pose>3.4044000000000008 4.8091599999999941 1.1102230246251565e-16 0 0 7.7715611723760958e-16</pose>
+      <pose>3.4044000000000008 4.8091599999999897 1.1102230246251565e-16 0 0 1.4432899320127035e-15</pose>
       <self_collide>false</self_collide>
     </model>
     <model name='unit_cylinder'>
@@ -2830,14 +2830,14 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://BathroomSink/meshes/BathroomSink.obj</uri>
+              <uri>file:///home/aero360/nolon_armcontrol/model://BathroomSink/meshes/BathroomSink.obj</uri>
             </mesh>
           </geometry>
         </visual>
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>model://BathroomSink/meshes/BathroomSink_Col.obj</uri>
+              <uri>file:///home/aero360/nolon_armcontrol/model://BathroomSink/meshes/BathroomSink_Col.obj</uri>
             </mesh>
           </geometry>
         </collision>
@@ -2879,7 +2879,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://whiteboard/meshes/whiteboard.obj</uri>
+              <uri>file:///home/aero360/nolon_armcontrol/model://whiteboard/meshes/whiteboard.obj</uri>
               <scale>0.01 0.01 0.01</scale>
             </mesh>
           </geometry>
@@ -2899,10 +2899,10 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>7.3027701377868652 -11.088600158691406 -0.0034432599786669016 1.5816663049527049 0 0</pose>
+      <pose>7.3027701377868652 -11.088600158691406 -0.0034432599786669016 1.5816663049527053 0 0</pose>
       <self_collide>false</self_collide>
     </model>
-  <model name='window_squeegee_2'>
+    <model name='window_squeegee_2'>
       <static>false</static>
       <self_collide>false</self_collide>
       <link name='squeegee_body'>
@@ -3089,7 +3089,7 @@
       </link>
       <pose>6.102881908416748 -7.8917098045349121 0.010497599840164185 0 0 0</pose>
     </model>
-  <model name='toilet_2'>
+    <model name='toilet_2'>
       <static>true</static>
       <link name='link'>
         <collision name='collision'>
@@ -3110,7 +3110,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://toilet/meshes/toilet.dae</uri>
+              <uri>file:///home/aero360/nolon_armcontrol/model://toilet/meshes/toilet.dae</uri>
               <scale>1.3999999999999999 1.3999999999999999 1.3999999999999999</scale>
             </mesh>
           </geometry>
@@ -3130,7 +3130,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>5.6663236618041992 -8.4108991622924805 0 0 0 1.5694300101611129</pose>
+      <pose>5.6663236618041992 -8.4108991622924805 0 0 0 1.5694300101611132</pose>
       <self_collide>false</self_collide>
     </model>
     <model name='whiteboard_0'>
@@ -3154,7 +3154,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://whiteboard/meshes/whiteboard.obj</uri>
+              <uri>file:///home/aero360/nolon_armcontrol/model://whiteboard/meshes/whiteboard.obj</uri>
               <scale>0.01 0.01 0.01</scale>
             </mesh>
           </geometry>
@@ -3174,7 +3174,7 @@
         </inertial>
         <enable_wind>false</enable_wind>
       </link>
-      <pose>9.895843505859375 -8.9399538040161133 -0.60817331075668335 1.5677099515421313 0.003781454480611087 1.5470100210843245</pose>
+      <pose>9.895843505859375 -8.9399538040161133 -0.60817331075668335 1.5677099515421311 0.0037814544806114201 1.5470100210843238</pose>
       <self_collide>false</self_collide>
     </model>
     <light name='sun' type='directional'>
